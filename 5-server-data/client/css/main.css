@@ -1,0 +1,15 @@
+#animal-table td {
+  height: 50px;
+  border: 1px solid gray;
+}
+
+#cat-strip td.active {
+  background-color: blue;
+}
+
+#dog-strip td.active {
+  background-color: red;
+}
+#animal-table{
+  width: 100%;
+}
