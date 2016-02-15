@@ -1,11 +1,25 @@
 //Code from the original game
 GAME_SIZE=8
 
+
+// Animal consructor
+var Animal = function(name, key) {
+  this.name = name;
+  this.position = 0;
+  this.key = key;
+}
+
+var cat = new Animal('fluffy', 'C');
+var dog = new Animal('fido', 'D');
+
+
+  // var cat={name:"fluffy", position:0, key:"C"};
+  // var dog={name:"fido", position:0, key:"D"};
+
 function createAnimals(){
-  var cat={name:"fluffy", position:0, key:"C"};
-  var dog={name:"fido", position:0, key:"D"};
   return [cat, dog]
 }
+
 
 var advance=function(animal){
   animal.position += 1;
@@ -18,7 +32,7 @@ var displayAdvance= function(animal, row){
 }
 
 var checkWinner=function(animals){
-  for(i=0;i<animals.length;++i){
+  for(i = 0; i < animals.length; ++i){
    if (animals[i].position >= GAME_SIZE){
     return animals[i]
   }
